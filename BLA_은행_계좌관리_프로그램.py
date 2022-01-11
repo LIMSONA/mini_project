@@ -108,12 +108,12 @@ class BankManager:
         print("일치하는 계좌번호가 존재하지 않습니다")
     
     # 1번 계좌번호의 중복여부를 확인 함수
-    def new_id(self,user):             
+    def new_id(self,custom):             
         for i in all_id:
-            if i.get_id() == user.get_id():
+            if i.get_id() == custom.get_id():
                 return "입력하신 계좌번호는 이미 존재하는 계좌번호 입니다."
             
-        all_id.append(user)
+        all_id.append(custom)
         return "계좌 개설이 완료되었습니다."   
     
     # 4번 잔액 조회
